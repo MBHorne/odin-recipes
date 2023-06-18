@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet" />
+    <style>
+        * {
+            font-family: "Inter-Regular";
+            font-size: 10pt;
+        }
+        .fullname {
+            font-weight: bold;
+            color: #966e53;
+        }
+        .department {
+            font-size: 8pt;
+        }
+        .info {
+            margin-top: 10px;
+        }
+        .title {
+
+        }
+        .url {
+            color:#966e53;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        a {
+            color:#966e53;
+        }
+        img {
+            margin-bottom: -5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table style="border-collapse: collapse; width: 99.966507%; font-family:Inter-Regular;" border="0">
+          <tbody>
+            <tr>
+              <td style="width: 100%;">
+                <div>
+                  <span class="fullname">{{FullName}}<br /></span>
+                  <span class="title">{{if JobTitle}}{{JobTitle}}{{CustomAttribute1}}{{end}}<br /></span>
+                  <span class="department">{{if Department}}{{Department}}{{end}}</span>
+                </div>
+                <div>
+                  <P class="info">
+                    {{if Phone}}Direkt {{Phone}}{{end}}<br />
+                    {{if (string.contains City "Stockholm")}}Box 7043 | 103 86 {{City}}<br />
+                    Besök {{Street}}{{else}} Besök {{Street}} | {{PostalCode}} {{City}}{{end}}
+                  </P>
+                  <p class="url">
+                    <a href="mailto:{{Email}}">{{Email}}</a><br />
+                    <a href=https://www.novier.se>www.novier.se</a>
+                  </p>
+                  <img src="https://images.eu.signature365.com/lqrn7ukpgl43cjw7/img_QaqNMPH9WxYFwnGc/v1.png" alt=""
+                    width="230" height="56" />
+                </div>
+                <table style="border-collapse: collapse; width: 1000px; height: 66px;">
+                  <tbody>
+                    <tr style="height: 122px;">
+                      <td style="width: 985px; height: 66px;">
+                        <p style="font-size: 8pt; color: #c9c3b8; font-family: 'Inter-Regular';"
+                          data-darkreader-inline-color="">
+                          IMPORTANT NOTICE<br />The information contained in this message is intended for the personal and
+                          confidential
+                          use of the designated recipients named above and may contain confidential and/or privileged
+                          material.
+                          <br />If
+                          the reader of this message is not the intended recipient or an agent responsible for delivering it
+                          to the
+                          intended recipient, you are hereby notified that you have received this document in error, and that
+                          any
+                          review, dissemination, distribution, or copying of this message is strictly prohibited. If you have
+                          received
+                          this communication in error, please notify the sender immediately and delete this e-mail from your
+                          system.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+</body>
+</html>
